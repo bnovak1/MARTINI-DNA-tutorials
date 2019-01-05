@@ -1,5 +1,6 @@
 # MARTINI-DNA-tutorials
-Snakefiles for dsDNA based on MARTINI website tutorial and a new example for a ssDNA.
+* Snakefile for dsDNA setup and simulation based on [MARTINI website tutorial](http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/tutorial-martini-dna-gmx5)
+* Snakefile for a ssDNA setup and simulation.
 
 Requirements:
   * python 3 with snakemake package
