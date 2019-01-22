@@ -61,7 +61,9 @@ rule martinize:
 
 # This is different than the tutorial text because the
 # tutorial only explains how to add regular water molecules.
-# Added anti-freeze waters and ions in separate steps using gmx solvate.
+# Add anti-freeze waters and ions in separate steps using gmx solvate.
+# It might be better to use genion or a program like packmol or randomly replace W with WF and NA+
+# in the gro file to get a more random initial distribution of WF and NA+.
 rule download_water_box:
     output:
         'na-tutorials/dna-tutorial/martini-dna/water.gro'
