@@ -112,9 +112,9 @@ rule solvate:
         gro = 'na-tutorials/dna-tutorial/martini-dna/bw.gro',
     shell:
         '''
-        gmx solvate -cp {input.gro_box} -cs {input.gro_water} -o temp1.gro -radius 0.11 -maxsol 1100
-        gmx solvate -cp temp1.gro -cs {input.gro_antifreeze} -o temp2.gro -radius 0.11 -maxsol 128
-        gmx solvate -cp temp2.gro -cs {input.gro_sodium} -o {output.gro} -radius 0.11 -maxsol 22
+        gmx solvate -cp {input.gro_box} -cs {input.gro_water} -o temp1.gro -radius 0.22 -maxsol 1100
+        gmx solvate -cp temp1.gro -cs {input.gro_antifreeze} -o temp2.gro -radius 0.22 -maxsol 128
+        gmx solvate -cp temp2.gro -cs {input.gro_sodium} -o {output.gro} -radius 0.22 -maxsol 22
         rm -f temp*.gro
         '''
 

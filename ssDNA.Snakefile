@@ -161,9 +161,9 @@ rule solvate:
         '''
         nW=`cat {input.nW} | awk '{{print $1}}'`
         nWF=`cat {input.nW} | awk '{{print $2}}'`
-        gmx solvate -cp {input.gro_box} -cs {input.gro_water} -o temp1.gro -radius 0.11 -maxsol $nW
-        gmx solvate -cp temp1.gro -cs {input.gro_antifreeze} -o temp2.gro -radius 0.11 -maxsol $nWF
-        gmx solvate -cp temp2.gro -cs {input.gro_sodium} -o {output.gro} -radius 0.11 -maxsol {params.nsod}
+        gmx solvate -cp {input.gro_box} -cs {input.gro_water} -o temp1.gro -radius 0.22 -maxsol $nW
+        gmx solvate -cp temp1.gro -cs {input.gro_antifreeze} -o temp2.gro -radius 0.22 -maxsol $nWF
+        gmx solvate -cp temp2.gro -cs {input.gro_sodium} -o {output.gro} -radius 0.22 -maxsol {params.nsod}
         rm -f temp*.gro
         '''
 
